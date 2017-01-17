@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kay H. Brodersen / Google, Inc.">
+    <meta name="author" content="Kay H. Brodersen">
+    <link rel="icon" href="./favicon.ico">
+
+    <title>Kay H. Brodersen</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+    <link href="custom-extras.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+	<!-- Google Analytics -->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-16486034-1']);
+	  _gaq.push(['_trackPageview']);
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+	<!-- Main container -->
+    <div class="container">
+
+      <!-- Header -->
+  	  <div id="header">
+		<h1>Kay H. Brodersen</h1>
+		<p>Google, Inc.</p>
+	  </div>
+
+      <!-- Navigation bar -->
+      <nav class="navbar navbar-default">
+        <div class="container">
+
+	      <!-- ||| button -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <!-- Navigation items -->
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav"> <!-- pull-right -->
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="./publications.html">Publications</a></li>
+              <li><a href="./talks.html">Talks</a></li>
+              <li><a href="./code.html">Code</a></li>
+              <li><a href="./about.html">About me</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+      <!-- Content resides in 'row' elements with 'col' child elements -->
+      <div class="row" id="home">
+	  
+  	    <div class="col-md-12">
+	      <h3>Bayesian statistics, causal inference, and the web</h3>
+		<p>I'm a data scientist at Google, where I work on time-series analysis of web traffic, anomaly detection, causal inference in large-scale experiments, and auction theory. Before joining Google, I was a postdoctoral researcher at the Department of Information Technology and Electrical Engineering at ETH Zurich working on Bayesian inference in high-dimensional time-series data.</p>
+		<p>Statistical data analysis has seen a huge amount of progress in recent years. For example, there have been key advances in approximate inference and increasingly powerful tools for running massively parallelized analyses. Some ideas, for instance variational Bayesian techniques (<a href="file:///Users/kbroders/Documents/Website/2015%20version/talks/Brodersen_2013_03_22.pdf" target="blank">slides</a>), have been popularized by computationally intensive disciplines such as computational neuroscience. The same concepts are really powerful to solve hard problems on web traffic and search ads data. An open-source example is <a class="muted" href="https://google.github.io/CausalImpact/" target="_blank">CausalImpact</a>, a new implementation of an analysis approach to causal inference in time-series data (<a href="https://www.youtube.com/watch?v=GTgZfCltMm8&list=PL6O3g23-p8Tr5eqnIIPdBD_8eE5JBDBik&index=10" target="blank">video</a>).</p>
+
+          <div class="horline" style="margin-top:40px; margin-bottom:25px;"></div>
+
+		  <h3>Recent publications</h3>
+  		  <ul>
+			<li class="narrow">
+			  <b>Reward-guided learning with and without causal attribution</b><br/>
+			  G. Jocham*, <u>K.H. Brodersen*</u>, A.O. Constantinescu, M.C. Kahn, A. Ianni, M.E. Walton, M.F. Rushworth, T.E. Behrens (2016)<br/>
+			  <i>Neuron</i><br/>
+	          <a href="publications/Jocham_Brodersen_2016_Neuron.pdf" target="blank">PDF</a>
+			</li>
+
+			<li class="narrow">
+			  <b>Inferring causal impact using Bayesian structural time-series models</b><br/>
+			  <u>K.H. Brodersen</u>, F. Gallusser, J. Koehler, N. Remy, S. Scott (2015)<br/>
+			  <i>Annals of Applied Statistics</i><br/>
+			  <a class="muted" href="http://research.google.com/pubs/pub41854.html" target="blank">research.google.com</a>
+			</li>
+
+		    <li class="narrow">
+		      <b>CausalImpact, a new R package for estimating causal effects in time series</b><br/>
+			  <u>Kay H. Brodersen</u> / Google, Inc. (2014)<br/>
+		 	  <a class="muted" href="http://google-opensource.blogspot.com/2014/09/causalimpact-new-open-source-package.html" target="_blank">Announcement</a> &nbsp;
+			  <a class="muted" href="https://google.github.io/CausalImpact/" target="_blank">Project site</a> &nbsp;
+			  <a class="muted" href="https://github.com/google/CausalImpact" target="_blank">GitHub repository</a> &nbsp;
+			  <a class="muted" href="https://google.github.io/CausalImpact/CausalImpact.html" target="_blank">Documentation</a> &nbsp;
+			  <a href="https://www.youtube.com/watch?v=GTgZfCltMm8&list=PL6O3g23-p8Tr5eqnIIPdBD_8eE5JBDBik&index=10" target="blank">Video</a>
+			</li>
+
+			<li class="narrow">
+			  <b>Variational Bayesian mixed-effects inference for classification studies</b><br/>
+			  <u>K.H. Brodersen</u>, J. Daunizeau, C. Mathys, J.R. Chumbley, J.M. Buhmann, K.E. Stephan (2013)<br/>
+			  <i>NeuroImage</i><br/>
+			  <a class="muted" href="publications/Brodersen_2013_NeuroImage.pdf" target="blank">PDF</a>
+			</li>
+          </ul>
+
+		  <p style="margin-top:20px;">
+			<a class="muted" href="publications.html">Show all publications<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+		  </p>
+	
+          <div class="horline"></div>
+
+  	    </div><!-- /.col -->
+	  </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

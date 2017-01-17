@@ -1,0 +1,40 @@
+/* Header */
+#header {background:url(img/front_new.jpg) no-repeat bottom left #fff; color:#505050; height:80px; margin:-20px 0 0 0;}
+#header h1 {font-size:24px; color:#f0f0f0; margin:0 0 15px 15px; padding:15px 0 0;}
+#header p {font-size:15px; color:#bbbbbb; margin:-20px 0 15px 15px; padding:11px 0 0;}
+
+/* Negative margin for navbar to left-align with header */
+#navbar {margin-left:-17px;}
+
+/* More spacing below headings */
+#home h3 {margin-bottom:25px;}
+#content h3 {margin-bottom:30px;}
+#content h4 {margin-bottom:15px;}
+
+/* Horizontal line */
+.horline {background:#fff; border-top:2px solid #dadada; clear:both; color:#666; font-size:0.9em; margin:35px 0px 25px 0px; padding:0px 0; text-align:center;}
+
+/* Spacing between list items */
+#home li {margin-top:20px; margin-bottom:5px;}
+#content li {margin-top:30px; margin-bottom:5px;}
+#talks li {margin-top:18px; margin-bottom:5px;}
+
+/* Extendable abstracts */
+#content .abstract_short {padding-top:8px; padding-bottom:8px; color:#999999; line-height:1.5em; font-size:12px;}
+#content .abstract_short:before {content:"ABSTRACT.";}
+#content .abstract_link {color:#999999; text-decoration:none; font-weight:400;}
+#content .abstract_full {padding-top:15px; padding-bottom:14px; color:#303030; display:none;  line-height:1.5em; font-size:14px;}
+#content .abstract_full:before {content:"ABSTRACT.";}
+
+/* Publication info */
+#content .title {font-weight:bold;}
+#content .doi {color:#AAAAAA; font-size:13px;}
+
+/* Thumbnail images (Publications, Downloads) */
+#content img.thumbnail {background:#ccc; border:3px solid #f0f0f0; color:#303030; display:inline; padding:1px; margin:0 15px 5px 25px; float:right; margin:0 0 0 10px;}
+
+/* Fileicon images */
+#content img.fileicon {background:#fff; border:0px; display:inline; padding:0px; margin:0 5px -3px 0; vertical-align:baseline;}
+
+/* Footer */
+#footer {background:url(img/front_new.jpg) no-repeat bottom left #fff; color:#505050; height:20px; margin:0 0 -20px 0;}

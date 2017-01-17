@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kay H. Brodersen / Google, Inc.">
+    <meta name="author" content="Kay H. Brodersen">
+    <link rel="icon" href="./favicon.ico">
+
+    <title>Publications</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="starter-template.css" rel="stylesheet">
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+    <link href="custom-extras.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+	<!-- Google Analytics -->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-16486034-1']);
+	  _gaq.push(['_trackPageview']);
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+    <!-- Script for showing/hiding full abstracts -->
+	<script language="javascript" type="text/javascript">
+	function showHide(shID) {
+	  // Show full abstract
+	     if (document.getElementById(shID+'_short').style.display != 'none') {
+	 	  document.getElementById(shID+'_short').style.display = 'none';
+	         document.getElementById(shID+'_full').style.display = 'block';
+	     }
+	  // Hide full abstract
+	     else {
+		 document.getElementById(shID+'_short').style.display = 'block';
+	        document.getElementById(shID+'_full').style.display = 'none';
+	     }
+	}
+	</script>
+
+	<!-- Main container -->
+    <div class="container">
+
+      <!-- Header -->
+  	  <div id="header">
+		<h1>Kay H. Brodersen</h1>
+		<p>Google, Inc.</p>
+	  </div>
+
+      <!-- Navigation bar -->
+      <nav class="navbar navbar-default">
+        <div class="container">
+	      <!-- ||| button -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <!-- Navigation items -->
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav"> <!-- pull-right -->
+              <li><a href="./index.html">Home</a></li>
+              <li class="active"><a href="#">Publications</a></li>
+              <li><a href="./talks.html">Talks</a></li>
+              <li><a href="./code.html">Code</a></li>
+              <li><a href="./about.html">About me</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+      <!-- Content resides in 'row' elements with 'col' child elements -->
+      <div class="row" id="content">
+  	    <div class="col-md-12">
+
+		  <h3>Papers in statistics and machine learning</h3>
+		  <!-- Thumbnails will be displayed at 80px width (88px - 2*3px border - 2*1px padding) -->
+		  <ol>
+
+			<li>
+				<a href="http://research.google.com/pubs/pub41854.html" target="blank">
+					<img src="img/Brodersen_2015_AOAS.png" class="thumbnail" width="88"/>
+				</a>
+				<div class="title">Inferring causal impact using Bayesian structural time-series models</div>
+				<u>K.H. Brodersen</u>, F. Gallusser, J. Koehler, N. Remy, S. Scott (2015)<br/>
+				<i>Annals of Applied Statistics</i>, Vol. 9, No. 1, 247–274.<br/>
+				<div class="doi">doi:10.1214/14-AOAS788</div>
+				<a href="http://research.google.com/pubs/pub41854.html" target="blank">Article</a> &nbsp;
+				<a href="http://google-opensource.blogspot.com/2014/09/causalimpact-new-open-source-package.html" target="blank">R package</a> &nbsp;
+				<a href="https://scholar.google.ch/scholar?oi=bibs&hl=en&cites=4836725887667944732&as_sdt=5" target="blank">Citations</a>
+				<div id="R_short" class="abstract_short">
+					An important problem in econometrics and marketing is to infer the causal impact that a designed market intervention has exerted on an outcome metric over time. This paper proposes to infer causal impact on the basis of a diffusion-regression state-space model that predicts the counterfactual market response in a synthetic control ... <a href="#" class="abstract_link" onclick="showHide('R');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+				</div>
+				<div id="R_full" class="abstract_full">
+					An important problem in econometrics and marketing is to infer the causal impact that a designed market intervention has exerted on an outcome metric over time. This paper proposes to infer causal impact on the basis of a diffusion-regression state-space model that predicts the counterfactual market response in a synthetic control that would have occurred had no intervention taken place. In contrast to classical difference-in-differences schemes, state-space models make it possible to (i) infer the temporal evolution of attributable impact, (ii) incorporate empirical priors on the parameters in a fully Bayesian treatment, and (iii) flexibly accommodate multiple sources of variation, including local trends, seasonality, and the time-varying influence of contemporaneous covariates. Using a Markov chain Monte Carlo algorithm for posterior inference, we illustrate the statistical properties of our approach on simulated data. We then demonstrate its practical utility by estimating the causal effect of an online advertising campaign on search-related site visits. We discuss the strengths and limitations of state-space models in enabling causal attribution in those settings where a randomised experiment is unavailable. The CausalImpact R package provides an implementation of our approach.
+					<a href="#" class="abstract_link" onclick="showHide('R');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+				</div>
+			</li>
+
+			<li>
+				<a href="publications/Lomakina_2015_NeuroImage.pdf" target="blank">
+					<img src="img/Lomakina_2015_NeuroImage.png" class="thumbnail" width="88"/>
+				</a>
+				<div class="title">Inversion of hierarchical Bayesian models using Gaussian processes</div>
+				E. Lomakina, S. Paliwal, A.O. Diaconescu, <u>K.H. Brodersen</u>, E.A. Aponte, J.M. Buhmann, K.E. Stephan (2015)<br/>
+				<i>NeuroImage</i>, Vol. 118, 133–145<br/>
+				<div class="doi">doi:10.1016/j.neuroimage.2015.05.084</div>
+				<a href="publications/Lomakina_2015_NeuroImage.pdf" target="blank">PDF</a> &nbsp;
+				<a href="http://dx.doi.org/10.1016/j.neuroimage.2015.05.084" target="blank">Website</a>
+				<div id="V_short" class="abstract_short">
+Over the past decade, computational approaches to neuroimaging have increasingly made use of hierarchical Bayesian models (HBMs), either for inferring on physiological mechanisms underlying fMRI data (e.g., dynamic causal modelling, DCM) or for deriving computational trajectories (from behavioural data) which serve as regressors in ...
+					<a href="#" class="abstract_link" onclick="showHide('V');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+				</div>
+				<div id="V_full" class="abstract_full">
+Over the past decade, computational approaches to neuroimaging have increasingly made use of hierarchical Bayesian models (HBMs), either for inferring on physiological mechanisms underlying fMRI data (e.g., dynamic causal modelling, DCM) or for deriving computational trajectories (from behavioural data) which serve as regressors in general linear models. However, an unresolved problem is that standard methods for inverting the hierarchical Bayesian model are either very slow, e.g. Markov Chain Monte Carlo Methods (MCMC), or are vulnerable to local minima in non-convex optimisation problems, such as variational Bayes (VB). This article considers Gaussian process optimisation (GPO) as an alternative approach for global optimisation of sufficiently smooth and efficiently evaluable objective functions. GPO avoids being trapped in local extrema and can be computationally much more efficient than MCMC. Here, we examine the benefits of GPO for inverting HBMs commonly used in neuroimaging, including DCM for fMRI and the Hierarchical Gaussian Filter (HGF). Importantly, to achieve computational efficiency despite high-dimensional optimisation problems, we introduce a novel combination of GPO and local gradient-based search methods. The utility of this GPO implementation for DCM and HGF is evaluated against MCMC and VB, using both synthetic data from simulations and empirical data. Our results demonstrate that GPO provides parameter estimates with equivalent or better accuracy than the other techniques, but at a fraction of the computational cost required for MCMC. We anticipate that GPO will prove useful for robust and efficient inversion of high-dimensional and nonlinear models of neuroimaging data.
+					<a href="#" class="abstract_link" onclick="showHide('V');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+				</div>
+			</li>
+			
+			<li>
+				<img src="img/Zimmermann_2015_JEDM.png" class="thumbnail" width="88"/>
+				<div class="title">A model-based approach to predicting graduate-level performance using indicators of undergraduate-level performance</div>
+				J. Zimmermann, <u>K.H. Brodersen</u>, H.R. Heinimann, J.M. Buhmann (2015)<br/>
+				<i>Journal of Educational Data Mining</i>, Vol. 7, No. 3, 151–176<br/>
+				<a href="http://www.educationaldatamining.org/JEDM/index.php/JEDM/issue/view/JEDM2015V7N3" target="blank">Website</a>
+				<div id="W_short" class="abstract_short">
+					The graduate admissions process is crucial for controlling the quality of higher education, yet rules-of-thumb
+					and domain-specific experiences often dominate evidence-based approaches. The goal of the
+					present study is to dissect the predictive power of undergraduate performance indicators ...
+					<a href="#" class="abstract_link" onclick="showHide('W');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+				</div>
+				<div id="W_full" class="abstract_full">
+					The graduate admissions process is crucial for controlling the quality of higher education, yet rules-of-thumb
+					and domain-specific experiences often dominate evidence-based approaches. The goal of the
+					present study is to dissect the predictive power of undergraduate performance indicators and their
+					aggregates. We analyze 81 variables in 171 student records from a Bachelor's and a Master's program
+					in Computer Science and employ state-of-the-art modelsods suitable for high-dimensional data-settings.
+					We consider regression models in combination with variable selection and variable aggregation
+					embedded in a double-layered cross-validation loop. Moreover, bootstrapping is employed to identify
+					the importance of explanatory variables. Critically, the data is not confounded by an admission-induced
+					selection bias, which allows us to obtain an unbiased estimate of the predictive value of undergraduatelevel
+					indicators for subsequent performance at the graduate level. Our results show that undergraduatelevel
+					performance can explain 54% of the variance in graduate-level performance. Significantly, we
+					unexpectedly identified the third-year grade point average as the most significant explanatory variable,
+					whose influence exceeds the one of grades earned in challenging first-year courses. Analyzing the
+					structure of the undergraduate program shows that it primarily assesses a single set of student abilities.
+					Finally, our results provide a methodological basis for deriving principled guidelines for admissions
+					committees.
+					<a href="#" class="abstract_link" onclick="showHide('W');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+				</div>
+			</li>
+
+					<li>
+					<a href="publications/Brodersen_2013_NeuroImage.pdf" target="blank"><img src="img/Brodersen_2013_NeuroImage.png" class="thumbnail" width="88"/></a>
+					<div class="title">Variational Bayesian mixed-effects inference for classification studies</div>
+					<u>K.H. Brodersen</u>, J. Daunizeau, C. Mathys, J.R. Chumbley, J.M. Buhmann, K.E. Stephan (2013)<br/>
+					<i>NeuroImage</i>, 76, 345-361.<br/>
+					<div class="doi">doi:10.1016/j.neuroimage.2013.03.008</div>
+					<a href="publications/Brodersen_2013_NeuroImage.pdf" target="blank">PDF</a> &nbsp;
+					<a href="http://dx.doi.org/10.1016/j.neuroimage.2013.03.008" target="blank">Website</a>
+					<div id="P2_short" class="abstract_short">
+					Multivariate classification algorithms are powerful tools for predicting cognitive or pathophysiological states from neuroimaging data. Assessing the utility of a classifier in application domains such as cognitive neuroscience, brain-computer interfaces, or clinical diagnostics necessitates inference on classification performance ... <a href="#" class="abstract_link" onclick="showHide('P2');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</div>
+					<div id="P2_full" class="abstract_full">
+					Multivariate classification algorithms are powerful tools for predicting cognitive or pathophysiological states from neuroimaging data. Assessing the utility of a classifier in application domains such as cognitive neuroscience, brain-computer interfaces, or clinical diagnostics necessitates inference on classification performance at more than one level, i.e., both in individual subjects and in the population from which these subjects were sampled. Such inference requires models that explicitly account for both fixed-effects (within-subjects) and random-effects (between-subjects) variance components. While models of this sort are standard in mass-univariate analyses of fMRI data, they have not yet received much attention in multivariate classification studies of neuroimaging data, presumably because of the high computational costs they entail. This paper extends a recently developed hierarchical model for mixed-effects inference in multivariate classification studies and introduces an efficient variational Bayes approach to inference. Using both synthetic and empirical fMRI data, we show that this approach is equally simple to use as, yet more powerful than, a conventional t-test on subject-specific sample accuracies, and computationally much more efficient than previous sampling algorithms and permutation tests. Our approach is independent of the type of underlying classifier and thus widely applicable. The present framework may help establish mixed-effects inference as a future standard for classification group analyses. <a href="#" class="abstract_link" onclick="showHide('P2');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+					</div>
+					</li>
+
+					<li>
+					<a href="publications/Carrillo_2014_ROBOT2013.pdf" target="blank"><img src="img/Carrillo_2014_ROBOT2013.png" class="thumbnail" width="88"/></a>
+					<div class="title">Probabilistic performance evaluation for multiclass classification using the posterior balanced accuracy</div>
+					H. Carrillo, <u>K.H. Brodersen</u>, J.A. Castellanos (2013)<br/>
+					<i>ROBOT 2013</i>, 347-361, Springer.<br/>
+					<div class="doi">doi:10.1007/978-3-319-03413-3_25</div>
+					<a href="publications/Carrillo_2014_ROBOT2013.pdf" target="blank">PDF</a>&nbsp;
+					<a href="http://dx.doi.org/10.1007/978-3-319-03413-3_25" target="blank">Website</a>
+					<div id="R2_short" class="abstract_short">
+					An important problem in robotics is the empirical evaluation of classification algorithms that allow a robotic system to make accurate categorical predictions about its environment. Current algorithms ... <a href="#" class="abstract_link" onclick="showHide('R2');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</div>
+					<div id="R2_full" class="abstract_full">
+						An important problem in robotics is the empirical evaluation of classification algorithms that allow a robotic system to make accurate categorical predictions about its environment. Current algorithms are often assessed using sample statistics that can be difficult to interpret correctly and do not always provide a principled way of comparing competing algorithms. In this paper, we present a probabilistic alternative based on a Bayesian framework for inferring on balanced accuracies. Using the proposed probabilistic evaluation, it is possible to assess the balanced accuracy's posterior distribution of binary and multiclass classifiers. In addition, competing classifiers can be compared based on their respective posterior distributions. We illustrate the practical utility of our scheme and its properties by reanalyzing the performance of a recently published algorithm in the domain of visual action detection and on synthetic data. To facilitate its use, we provide an open-source MATLAB implementation.
+						<a href="#" class="abstract_link" onclick="showHide('R2');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+					</div>
+					</li>
+
+					<li>
+					<a href="publications/Brodersen_2012_PhD.pdf" target="blank">
+						<img src="img/Brodersen_2012_PhD.png" class="thumbnail" width="88"/>
+					</a>
+					<div class="title">Generative embedding and variational Bayesian inference for multivariate time series</div>
+					<u>K.H. Brodersen</u> (2012)<br/>
+					<i>PhD thesis</i>, ETH Zurich, Switzerland.<br/>
+					<a href="publications/Brodersen_2012_PhD.pdf" target="blank">PDF</a>
+					<div id="A_short" class="abstract_short">
+					Multivariate time series can be modelled using differential equations that describe how the components of an underlying dynamical system interact in time. A challenging domain of application ... <a href="#" class="abstract_link" onclick="showHide('A');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</div>
+					<div id="A_full" class="abstract_full">
+						Multivariate time series can be modelled using differential equations that describe how the components of an underlying dynamical system interact in time. A challenging domain of application is neuroscience, where dynamic causal models have been increasingly used to shed light on the mechanisms behind multivariate time series of brain activity acquired in the healthy and the diseased human brain. This thesis introduces an approach to translating such models into clinical applications which we refer to as generative embedding. Our approach exploits the notion that a mechanistically interpretable description of a system may provide more useful insights than the observed time series themselves. Conceptually, we begin by developing a model-based classification approach that is based on the combination of a generative model and a discriminative classifier. We show that this approach may lead to significantly more accurate diagnostic classifications and deeper mechanistic insights than previous schemes. Using a classifier on hierarchical data, as we do here, requires us to revisit conventional approaches to performance evaluation. We introduce novel Bayesian fixed-effects and mixed-effects models for inference on classification performance that correctly account for distinct sources of uncertainty to appropriately constrain posterior inferences. We propose to replace conventional classification accuracies by balanced accuracies whenever the data are not perfectly balanced themselves. We demonstrate the properties of these models using stochastic approximate inference based on Markov chain Monte Carlo. We then derive a computationally highly efficient deterministic variational Bayes approximation. Complementary to its use in classification, generative embedding may enable the discovery of mechanistically interpretable subgroups that were not known a priori. We develop a model-based clustering approach which we use to dissect a group of patients diagnosed with schizophrenia into subgroups with clinical validity. In summary, this thesis explores generative embedding and variational Bayesian inference to establish the conceptual, statistical, and computational foundations for utilizing model-based classification and clustering approaches in a clinical context. We envisage that future applications of our approach will enable the formulation of novel mechanistic hypotheses that decompose groups of patients with similar symptoms into pathophysiologically distinct subgroups. <a href="#" class="abstract_link" onclick="showHide('A');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+					</div>
+					</li>
+
+					<li>
+					<a href="publications/Brodersen_2012_JMLR.pdf" target="blank">
+						<img src="img/Brodersen_2012_JMLR.png" class="thumbnail" width="88"/>
+					</a>
+					<div class="title">Bayesian mixed-effects inference on classification performance in hierarchical data sets</div>
+					<u>K.H. Brodersen</u>, C. Mathys, J.R. Chumbley, J. Daunizeau, C.S. Ong, J.M. Buhmann, K.E. Stephan (2012)<br/>
+					<i>Journal of Machine Learning Research</i>, 13, 3133-3176.<br/>
+					<a href="publications/Brodersen_2012_JMLR.pdf" target="blank">PDF</a>
+					<div id="B_short" class="abstract_short">
+							Classification algorithms are frequently used on data with a natural hierarchical structure. For instance, classifiers are often trained and tested on trial-wise measurements, separately for each subject within a group ... <a href="#" class="abstract_link" onclick="showHide('B');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</div>
+					<div id="B_full" class="abstract_full">
+					Classification algorithms are frequently used on data with a natural hierarchical structure. For instance, classifiers are often trained and tested on trial-wise measurements, separately for each subject within a group. One important question is how classification outcomes observed in individual subjects can be generalized to the population from which the group was sampled. To address this question, this paper introduces novel statistical models that are guided by three desiderata. First, all models explicitly respect the hierarchical nature of the data, that is, they are mixed-effects models that simultaneously account for within-subjects (fixed-effects) and across-subjects (random-effects) variance components. Second, maximum-likelihood estimation is replaced by full Bayesian inference in order to enable natural regularization of the estimation problem and to afford conclusions in terms of posterior probability statements. Third, inference on classification accuracy is complemented by inference on the balanced accuracy, which avoids inflated accuracy estimates for imbalanced data sets. We introduce hierarchical models that satisfy these criteria and demonstrate their advantages over conventional methods using MCMC implementations for model inversion and model selection on both synthetic and empirical data. We envisage that our approach will improve the sensitivity and validity of statistical inference in future hierarchical classification studies. <a href="#" class="abstract_link" onclick="showHide('B');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+					</div>
+					</li>
+
+
+					<li>
+					<a href="publications/Brodersen_2010b_ICPR.pdf" target="blank">
+						<img src="img/Brodersen_2010b_ICPR.png" class="thumbnail" width="88"/>
+					</a>
+					<div class="title">The balanced accuracy and its posterior distribution</div>
+					<u>K.H. Brodersen</u>, C.S. Ong, K.E. Stephan, J.M. Buhmann (2010)<br/>
+					<i>Proceedings of the 20th International Conference on Pattern Recognition</i>, 3121-3124<br/>
+					<div class="doi">doi:10.1109/icpr.2010.764</div>
+					<a href="publications/Brodersen_2010b_ICPR.pdf" target="blank">PDF</a> &nbsp;
+					<a href="downloads.html#balanced_accuracy">Code</a> &nbsp;
+					<a href="https://scholar.google.ch/scholar?oi=bibs&hl=en&cites=2534660658716429977&as_sdt=5" target="blank">Citations</a>
+							<div id="H_short" class="abstract_short">
+							Evaluating the performance of a classification algorithm critically requires a measure of the degree to which unseen examples have been identified with their correct class labels. In practice, generalizability is frequently estimated by ... <a href="#" class="abstract_link" onclick="showHide('H');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+							</div>
+							<div id="H_full" class="abstract_full">
+								Evaluating the performance of a classification algorithm critically requires a measure of the degree to which unseen examples have been identified with their correct class labels. In practice, generalizability is frequently estimated by averaging the accuracies obtained on individual cross-validation folds. This procedure, however, is problematic in two ways. First, it does not allow for the derivation of meaningful confidence intervals. Second, it leads to an optimistic estimate when a biased classifier is tested on an imbalanced dataset. We show that both problems can be overcome by replacing the conventional point estimate of accuracy by an estimate of the posterior distribution of the balanced accuracy. <a href="#" class="abstract_link" onclick="showHide('H');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+							</div>
+					</li>
+
+					<li>
+					<a href="publications/Brodersen_2010a_ICPR.pdf" target="blank">
+						<img src="img/Brodersen_2010a_ICPR.png" class="thumbnail" width="88"/>
+					</a>
+					<div class="title">The binormal assumption on precision-recall curves</div>
+					<u>K.H. Brodersen</u>, C.S. Ong, K.E. Stephan, J.M. Buhmann (2010)<br/>
+					<i>Proceedings of the 20th International Conference on Pattern Recognition</i>, 4263-4266<br/>
+					<div class="doi">doi:10.1109/icpr.2010.1036</div>
+					<a href="publications/Brodersen_2010a_ICPR.pdf" target="blank">PDF</a> &nbsp; <a href="downloads.html#pr_curve">Code</a>
+					<div id="I_short" class="abstract_short">
+							The precision-recall curve (PRC) has become a widespread conceptual basis for assessing classification performance. The curve relates the positive predictive value of a classifier to its true positive rate and often provides a useful ... <a href="#" class="abstract_link" onclick="showHide('I');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+							</div>
+							<div id="I_full" class="abstract_full">
+							The precision-recall curve (PRC) has become a widespread conceptual basis for assessing classification performance. The curve relates the positive predictive value of a classifier to its true positive rate and often provides a useful alternative to the well-known receiver operating characteristic (ROC). The empirical PRC, however, turns out to be a highly imprecise estimate of the true curve, especially in the case of a small sample size and class imbalance in favour of negative examples. Ironically, this situation tends to occur precisely in those applications where the curve would be most useful, e.g., in anomaly detection or information retrieval. Here, we propose to estimate the PRC on the basis of a simple distributional assumption about the decision values that generalizes the established binormal model for estimating smooth ROC curves. Using simulations, we show that our approach outperforms empirical estimates, and that an account of the class imbalance is crucial for obtaining unbiased PRC estimates. <a href="#" class="abstract_link" onclick="showHide('I');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+							</div>
+					</li>
+				</ol>
+
+				<!-- ============================================================================= -->
+				<br/><br/>
+				<h3>Papers in computational neuroscience</h3>
+				<ol start="10"> <!-- KEEP UPDATING -->
+
+								<li>
+									<a href="publications/Jocham_Brodersen_2016_Neuron.pdf" target="blank">
+				 					  <img src="img/Jocham_Brodersen_2016_Neuron.png" class="thumbnail" width="88"/>
+				                    </a>
+									<div class="title">Reward-guided learning with and without causal attribution</div>
+									G. Jocham*, <u>K.H. Brodersen*</u>, A.O. Constantinescu, M.C. Kahn, A. Ianni, M.E. Walton, M.F. Rushworth, T.E. Behrens (2016)<br/>
+									<i>Neuron</i>, Vol. 90, Issue 1, 177–190<br/>
+									<class style="color:#999999; line-height:1.5em; font-size:11px;">* Co-first authors</class><br/>
+							        <div class="doi">doi:10.1016/j.neuron.2016.02.018</div>
+						            <a href="publications/Jocham_Brodersen_2016_Neuron.pdf" target="blank">PDF</a> &nbsp;
+						            <a href="publications/Jocham_Brodersen_2016_Neuron_Supplement.pdf" target="blank">Supplement</a> &nbsp;
+						            <a href="http://dx.doi.org/10.1016/j.neuron.2016.02.018" target="blank">Website</a>
+									<div id="X_short" class="abstract_short">
+										When an organism receives a reward, it is crucial to know which of many candidate actions caused this reward. However, recent work suggests that learning is possible even when this most fundamental assumption is not met. We used novel reward-guided learning paradigms  ...
+										<a href="#" class="abstract_link" onclick="showHide('X');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+									</div>
+									<div id="X_full" class="abstract_full">
+										When an organism receives a reward, it is crucial to know which of many candidate actions caused this reward. However, recent work suggests that learning is possible even when this most fundamental assumption is not met. We used novel reward-guided learning paradigms in two fMRI studies to show that humans deploy separable learning mechanisms that operate in parallel. While behaviour was dominated by precise contingent learning, it also revealed hallmarks of non-contingent learning strategies. These learning mechanisms were separable behaviourally and neurally. Lateral orbitofrontal cortex supported contingent learning and reflected contingencies between outcomes and their causal choices. Amygdala responses around reward times related to statistical patterns of learning. Time-based heuristic mechanisms were related to activity in sensorimotor corticostriatal circuitry. Our data point to the existence of several learning mechanisms in the human brain, of which only one relies on applying known rules about the causal structure of the task.
+										<a href="#" class="abstract_link" onclick="showHide('X');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+									</div>
+								</li>
+
+				<li>
+					<a href="http://www.sciencedirect.com/science/article/pii/S1053811916302877" target="blank">
+						<img src="img/Stephan_2016_NeuroImage.png" class="thumbnail" width="88"/>
+					</a>
+					<div class="title">Computational neuroimaging strategies for single patient predictions</div>
+					K.E. Stephan, F. Schlagenhauf, Q.J.M. Huys, S. Raman, E.A. Aponte, <u>K.H.Brodersen</u>, L. Rigoux, R.J. Moran, J. Daunizeau, R.J. Dolan, K.J. Friston, A. Heinz (2016)<br/>
+					<i>NeuroImage</i><br/>
+					<div class="doi">doi:10.1016/j.neuroimage.2016.06.038</div>
+					<a href="http://www.sciencedirect.com/science/article/pii/S1053811916302877" target="blank">Website</a>
+					<div id="Y_short" class="abstract_short">
+						Neuroimaging increasingly exploits machine learning techniques in an attempt to achieve clinically relevant single-subject predictions. An alternative to machine learning, which tries to establish predictive links between features of the observed data and clinical variables, is the deployment of computational models for inferring ...
+						<a href="#" class="abstract_link" onclick="showHide('Y');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</div>
+					<div id="Y_full" class="abstract_full">
+						Neuroimaging increasingly exploits machine learning techniques in an attempt to achieve clinically relevant single-subject predictions. An alternative to machine learning, which tries to establish predictive links between features of the observed data and clinical variables, is the deployment of computational models for inferring on the (patho)physiological and cognitive mechanisms that generate behavioural and neuroimaging responses. This paper discusses the rationale behind a computational approach to neuroimaging-based single-subject inference; focusing on its potential for characterising disease mechanisms in individual subjects and mapping these characterisations to clinical predictions. Following an overview of two main approaches – Bayesian model selection and generative embedding – which can link computational models to individual predictions, we review how these modelsods accommodate heterogeneity in psychiatric and neurological spectrum disorders, help avoid erroneous interpretations of neuroimaging data, and establish a link between a mechanistic, model-based approach and the statistical perspectives afforded by machine learning.
+						<a href="#" class="abstract_link" onclick="showHide('Y');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+					</div>
+				</li>
+
+	            <li>
+	                <a href="publications/Mathys_2014_FrontHumNeur.pdf" target="blank">
+		              <img src="img/Mathys_2014_FrontHumNeur.png" class="thumbnail" width="88"/>
+		            </a>
+		          <div class="title">Uncertainty in perception and the Hierarchical Gaussian Filter</div>
+		          C.D. Mathys, E.I. Lomakina, J. Daunizeau, S. Iglesias, <u>K.H. Brodersen</u>, K.J. Friston, K.E. Stephan (2014)<br/>
+		          <i>Frontiers in Human Neuroscience</i><br/>
+			      <div class="doi">doi:10.3389/fnhum.2014.00825</div>
+		          <a href="publications/Mathys_2014_FrontHumNeur.pdf" target="blank">PDF</a> &nbsp;
+		          <a href="http://dx.doi.org/10.3389/fnhum.2014.00825" target="blank">Website</a>
+		          <div id="U_short" class="abstract_short">
+	                In its full sense, perception rests on an agent's model of how its sensory input comes about and the inferences it draws based on this model. These inferences are necessarily uncertain. Here, we illustrate how the Hierarchical Gaussian Filter (HGF) offers a principled and generic way to deal with the several forms that uncertainty in perception takes ...
+	                <a href="#" class="abstract_link" onclick="showHide('U');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+	              </div>
+	              <div id="U_full" class="abstract_full">
+	                In its full sense, perception rests on an agent's model of how its sensory input comes about and the inferences it draws based on this model. These inferences are necessarily uncertain. Here, we illustrate how the Hierarchical Gaussian Filter (HGF) offers a principled and generic way to deal with the several forms that uncertainty in perception takes. The HGF is a recent derivation of one-step update equations from Bayesian principles that rests on a hierarchical generative model of the environment and its (in)stability. It is computationally highly efficient, allows for online estimates of hidden states, and has found numerous applications to experimental data from human subjects. In this paper, we generalize previous descriptions of the HGF and its account of perceptual uncertainty. First, we explicitly formulate the extension of the HGF's hierarchy to any number of levels; second, we discuss how various forms of uncertainty are accommodated by the minimization of variational free energy as encoded in the update equations; third, we combine the HGF with decision models and demonstrate the inversion of this combination; finally, we report a simulation study that compared four optimization methods for inverting the HGF/decision model combination at different noise levels. These four methods (Nelder–Mead simplex algorithm, Gaussian process-based global optimization, variational Bayes and Markov chain Monte Carlo sampling) all performed well even under considerable noise, with variational Bayes offering the best combination of efficiency and informativeness of inference. Our results demonstrate that the HGF provides a principled, flexible, and efficient—but at the same time intuitive—framework for the resolution of perceptual uncertainty in behaving agents.
+	                <a href="#" class="abstract_link" onclick="showHide('U');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+	              </div>
+	            </li>
+
+						<li>
+							<a href="publications/Maass_2014_NatureComms.pdf" target="blank">
+							<img src="img/Maass_2014_NatureComms.png" class="thumbnail" width="88"/>
+							</a>
+							<div class="title">Laminar activity in the hippocampus and entorhinal cortex related to novelty and episodic encoding</div>
+							A. Maass, H. Schütze, O. Speck, A. Yonelinas, C. Tempelmann, H.J. Heinze, D. Berron, A. Cardenas-Blanco, <u>K.H. Brodersen</u>, K.E. Stephan, E. Düzel (2014)<br/>
+							<i>Nature Communications</i><br/>
+							<div class="doi">doi:10.1038/ncomms6547</div>
+							<a href="publications/Maass_2014_NatureComms.pdf" target="blank">PDF</a> &nbsp;
+							<a href="http://dx.doi.org/10.1038/ncomms6547" target="blank">Website</a>
+							<div id="S_short" class="abstract_short">
+								The ability to form long-term memories for novel events depends on information processing within the hippocampus (HC) and entorhinal cortex (EC). The HC-EC circuitry shows a quantitative segregation of anatomical directionality into ... <a href="#" class="abstract_link" onclick="showHide('S');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+							</div>
+							<div id="S_full" class="abstract_full">
+								The ability to form long-term memories for novel events depends on information processing within the hippocampus (HC) and entorhinal cortex (EC). The HC-EC circuitry shows a quantitative segregation of anatomical directionality into different neuronal layers. Whereas superficial EC layers mainly project to dentate gyrus (DG), CA3 and apical CA1 layers, HC output is primarily sent from pyramidal CA1 layers and subiculum to deep EC layers. Here we utilize this directionality information by measuring encoding activity within HC/EC subregions with 7 Tesla high resolution functional magnetic resonance imaging (fMRI). Multivariate Bayes decoding within HC/EC subregions shows that processing of novel information most strongly engages the input structures (superficial EC and DG/CA2-3), whereas subsequent memory is more dependent on activation of output regions (deep EC and pyramidal CA1). This suggests that while novelty processing is strongly related to HC-EC input pathways, the memory fate of a novel stimulus depends more on HC-EC output.
+								<a href="#" class="abstract_link" onclick="showHide('S');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+							</div>
+						</li>
+
+
+				<li>
+					<a href="publications/Brodersen_2014_NeuroImageClinical.pdf" target="blank">
+						<img src="img/Brodersen_2014_NeuroImageClinical.png" class="thumbnail" width="88"/>
+					</a>
+					<div class="title">Dissecting psychiatric spectrum disorders by generative embedding</div>
+					<u>K.H. Brodersen</u>, L. Deserno, F. Schlagenhauf, Z. Lin, W.D. Penny, J.M. Buhmann, K.E. Stephan (2014)<br/>
+					<i>NeuroImage: Clinical</i><br/>
+					<div class="doi">doi:10.1016/j.nicl.2013.11.002</div>
+					<a href="publications/Brodersen_2014_NeuroImageClinical.pdf" target="blank">PDF</a> &nbsp;
+					<a href="http://dx.doi.org/10.1016/j.nicl.2013.11.002" target="blank">Website</a>
+					<div id="Q_short" class="abstract_short">
+						This proof-of-concept study examines the feasibility of defining subgroups in psychiatric spectrum disorders by generative embedding, using dynamical system models which infer neuronal circuit mechanisms from neuroimaging data. To this end, we re-analysed ... <a href="#" class="abstract_link" onclick="showHide('Q');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</div>
+					<div id="Q_full" class="abstract_full">
+						This proof-of-concept study examines the feasibility of defining subgroups in psychiatric spectrum disorders by generative embedding, using dynamical system models which infer neuronal circuit mechanisms from neuroimaging data. To this end, we re-analysed an fMRI dataset of 41 patients diagnosed with schizophrenia and 42 healthy controls performing a numerical n-back working-memory task. In our generative-embedding approach, we used parameter estimates from a dynamic causal model (DCM) of a visual-parietal-prefrontal network to define a model-based feature space for the subsequent application of supervised and unsupervised learning techniques. First, using a linear support vector machine for classification, we were able to predict individual diagnostic labels significantly more accurately (78%) from DCM-based effective connectivity estimates than from functional connectivity between (62%) or local activity within the same regions (55%). Second, an unsupervised approach based on variational Bayesian Gaussian mixture modelling provided evidence for two clusters which mapped onto patients and controls with nearly the same accuracy (71%) as the supervised approach. Finally, when restricting the analysis only to the patients, Gaussian mixture modelling suggested the existence of three patient subgroups, each of which was characterised by a different architecture of the visual-parietal-prefrontal working-memory network. Critically, even though this analysis did not have access to information about the patients’ clinical symptoms, the three neurophysiologically defined subgroups mapped onto three clinically distinct subgroups, distinguished by significant differences in negative symptom severity, as assessed on the Positive and Negative Syndrome Scale (PANSS). In summary, this study provides a concrete example of how psychiatric spectrum diseases may be split into subgroups that are defined in terms of neurophysiological mechanisms specified by a generative model of network dynamics such as DCM. The results corroborate our previous findings in stroke patients that generative embedding, compared to analyses of more conventional measures such as functional connectivity or regional activity, can significantly enhance both the interpretability and performance of computational approaches to clinical classification. <a href="#" class="abstract_link" onclick="showHide('Q');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+					</div>
+				</li>
+
+				<li>
+				<a href="publications/Iglesias_2013_Neuron.pdf" target="blank"><img src="img/Iglesias_2013_Neuron.png" class="thumbnail" width="88"/></a>
+				<div class="title">Hierarchical prediction errors in midbrain and basal forebrain during sensory learning</div>
+				S. Iglesias, C. Mathys, <u>K.H. Brodersen</u>, L. Kasper, M. Piccirelli, H.E.M. den Ouden, K.E. Stephan (2013)<br/>
+				<i>Neuron</i>, 80, 519-530.<br/>
+				<div class="doi">doi:10.1016/j.neuron.2013.09.009</div>
+				<a href="publications/Iglesias_2013_Neuron.pdf" target="blank">PDF</a>&nbsp;
+				<a href="http://dx.doi.org/10.1016/j.neuron.2013.09.009" target="blank">Website</a>
+				<div id="Q2_short" class="abstract_short">
+				In Bayesian brain theories, hierarchically related prediction errors (PEs) play a central role for predicting sensory inputs and inferring their underlying causes, e.g., the probabilistic structure of the environment and its volatility. Notably, PEs at different hierarchical levels may be encoded by ... <a href="#" class="abstract_link" onclick="showHide('Q2');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+				</div>
+				<div id="Q2_full" class="abstract_full">
+				In Bayesian brain theories, hierarchically related prediction errors (PEs) play a central role for predicting sensory inputs and inferring their underlying causes, e.g., the probabilistic structure of the environment and its volatility. Notably, PEs at different hierarchical levels may be encoded by different neuromodulatory transmitters. Here, we tested this possibility in computational fMRI studies of audio-visual learning. Using a hierarchical Bayesian model, we found that low-level PEs about visual stimulus outcome were reflected by widespread activity in visual and supramodal areas but also in the midbrain. In contrast, high-level PEs about stimulus probabilities were encoded by the basal forebrain. These findings were replicated in two groups of healthy volunteers. While our fMRI measures do not reveal the exact neuron types activated in midbrain and basal forebrain, they suggest a dichotomy between neuromodulatory systems, linking dopamine to low-level PEs about stimulus outcome and acetylcholine to more abstract PEs about stimulus probabilities. <a href="#" class="abstract_link" onclick="showHide('Q2');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+				</div>
+				</li>
+
+				<li>
+				<a href="publications/Klein-Fluegge_2013_JNeur.pdf" target="blank">
+					<img src="img/Klein-Fluegge_2013_JNeur.png" class="thumbnail" width="88"/>
+				</a>
+				<div class="title">Segregated encoding of reward-identity and stimulus-reward associations in human orbitofrontal cortex</div>
+				M. Klein-Flugge, H. Barron, <u>K.H. Brodersen</u>, R. Dolan, T.E.J. Behrens (2013)<br/>
+				<i>Journal of Neuroscience</i>, 33(7):3202-3211.<br/>
+				<div class="doi">doi:10.1523/jneurosci.2532-12.2013</div>
+				<a href="publications/Klein-Fluegge_2013_JNeur.pdf" target="blank">PDF</a> &nbsp; <a href="http://www.jneurosci.org/content/33/7/3202.long" target="blank">Website</a>
+				<div id="N_short" class="abstract_short">
+				A dominant focus in studies of learning and decision-making is the neural coding of scalar reward value. This emphasis ignores the fact that choices are strongly shaped by ... <a href="#" class="abstract_link" onclick="showHide('N');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+				</div>
+				<div id="N_full" class="abstract_full">
+				A dominant focus in studies of learning and decision-making is the neural coding of scalar reward value. This emphasis ignores the fact that choices are strongly shaped by a rich representation of potential rewards. Here, using fMRI adaptation we demonstrate that responses in the human orbitofrontal cortex (OFC) encode a representation of the specific type of food reward predicted by a visual cue. By controlling for value across rewards, and by linking each reward with two distinct stimuli, we could test for representations of reward-identity that were independent of associative information. Our results show reward-identity representations in a medial-caudal region of OFC, independent of the associated predictive stimulus. This contrasts with a more rostro-lateral OFC region encoding reward-identity representations tied to the predicate stimulus. This demonstration of adaptation in OFC to reward specific representations opens an avenue for investigation of more complex decision mechanisms that are not immediately accessible in standard analyses which focus on correlates of average activity. <a href="#" class="abstract_link" onclick="showHide('N');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+				</div>
+				</li>
+
+				<li>
+				<a href="publications/Lee_2013_JCogNeur.pdf" target="blank">
+					<img src="img/Lee_2013_JCogNeur.png" class="thumbnail" width="88"/>
+				</a>
+				<div class="title">Disentangling spatial perception and spatial memory in the hippocampus: a univariate and multivariate pattern analysis fMRI study</div>
+				A. Lee, <u>K.H. Brodersen</u>, S. Rudebeck (2013)<br/>
+				<i>Journal of Cognitive Neuroscience</i><br/>
+				<div class="doi">doi:10.1162/jocn_a_00301</div>
+				<a href="publications/Lee_2013_JCogNeur.pdf" target="blank">PDF</a> &nbsp; <a href="http://dx.doi.org/10.1162/jocn_a_00301" target="blank">Website</a>
+				<div id="D_short" class="abstract_short">
+				Although the role of the hippocampus in spatial cognition is well accepted, it is unclear whether its involvement is restricted to the mnemonic domain or also extends to perception. We used fMRI to scan neurologically healthy participants  ... <a href="#" class="abstract_link" onclick="showHide('D');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+				</div>
+				<div id="D_full" class="abstract_full">
+					Although the role of the hippocampus in spatial cognition is well accepted, it is unclear whether its involvement is restricted to the mnemonic domain or also extends to perception. We used fMRI to scan neurologically healthy participants during a scene oddity judgment task that placed no explicit demand on long-term memory. Crucially, a surprise recognition test was administered after scanning so that each trial could be categorized not only according to oddity accuracy but also according to subsequent memory. Univariate analyses showed significant hippocampal activity in association with correct oddity judgment, whereas greater parahippocampal place area (PPA) activity was observed during incorrect oddity trials, both irrespective of subsequent recognition performance. Consistent with this, multivariate pattern analyses revealed that a linear support vector machine was able to distinguish correct from incorrect oddity trials on the basis of activity in voxels within the hippocampus or PPA. Although no significant regions of activity were identified by univariate analyses in association with memory performance, a classifier was able to predict subsequent memory using voxels in either the hippocampus or PPA. Our findings are consistent with the idea that the hippocampus is important for processes beyond long-term declarative memory and that this structure may also play a role in complex spatial perception. <a href="#" class="abstract_link" onclick="showHide('D');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+				</div>
+				</li>
+
+				<li>
+				<a href="publications/Feis_2013_NeuroImage.pdf" target="blank">
+					<img src="img/Feis_2013_NeuroImage.png" class="thumbnail" width="88"/>
+				</a>
+				<div class="title">Decoding gender dimorphism of the human brain using multimodal anatomical and diffusion MRI data</div>
+				D.-L. Feis, <u>K.H. Brodersen</u>, D. Yves von Cramon, E. Luders, M. Tittgemeyer (2013)<br/>
+				<i>NeuroImage</i>, 70, 250-257.<br/>
+				<div class="doi">doi:10.1016/j.neuroimage.2012.12.068</div>
+				<a href="publications/Feis_2013_NeuroImage.pdf" target="blank">PDF</a> &nbsp; <a href="http://www.sciencedirect.com/science/article/pii/S1053811913000074" target="blank">Website</a>
+				<div id="O_short" class="abstract_short">
+				The female brain contains a larger proportion of gray-matter tissue, while the male brain comprises more white matter. Findings like these have sparked increasing interest in studying ... <a href="#" class="abstract_link" onclick="showHide('O');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+				</div>
+				<div id="O_full" class="abstract_full">
+					The female brain contains a larger proportion of gray-matter tissue, while the male brain
+					comprises more white matter. Findings like these have sparked increasing interest in studying
+					dimorphism of the human brain: the general effect of gender on aspects of brain architecture.
+					To date, the vast majority of imaging studies is based on unimodal MR images and typically
+					limited to a small set of either gray- or white-matter regions-of-interest. The morphological
+					content of magnetic resonance (MR) images, however, strongly depends on the underlying
+					contrast mechanism. Consequently, in order to fully capture gender-specific morphological
+					differences in distinct brain tissues, it might prove crucial to consider multiple imaging
+					modalities simultaneously. This study introduces a novel approach to perform such
+					multimodal classification incorporating the relative strengths of each modality-specific
+					physical aperture to tissue properties. To illustrate our approach, we analyzed multimodal MR
+					images (T1-, T2-, and diffusion weighted) from 121 subjects (67 females) using a linear
+					support vector machine with a mass-univariate feature selection procedure. We demonstrate
+					that the combination of different imaging modalities yields a significantly higher balanced
+					classification accuracy (96%) than any one modality by itself (83%–88%). Our results do not
+					only confirm previous morphometric findings; crucially, they also shed new light on the most
+					discriminative features in gray-matter volume and microstructure in cortical and subcortical
+					areas. Specifically, we find that gender disparities are primarily distributed along brain
+					networks thought to be involved in social cognition, reward-based learning, decision-making,
+					and visual-spatial skills. <a href="#" class="abstract_link" onclick="showHide('O');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+				</div>
+				</li>
+
+						<li>
+						<a href="publications/Brodersen_2012_NeuroImage.pdf" target="blank">
+							<img src="img/Brodersen_2012_NeuroImage.png" class="thumbnail" width="88"/>
+						</a>
+						<div class="title">Decoding the perception of pain from fMRI using multivariate pattern analysis</div>
+						<u>K.H. Brodersen</u>, K. Wiech, E.I. Lomakina, C.-S. Lin, J.M. Buhmann, U. Bingel, M. Ploner, K.E. Stephan, I. Tracey (2012)<br/>
+						<i>NeuroImage</i>, 63, 1162-1170.<br/>
+						<div class="doi">doi:10.1016/j.neuroimage.2012.08.035</div>
+						<a href="publications/Brodersen_2012_NeuroImage.pdf" target="blank">PDF</a> &nbsp; <a href="http://dx.doi.org/10.1016/j.neuroimage.2012.08.035" target="blank">Website</a>
+						<div id="C_short" class="abstract_short">
+								Pain is known to comprise sensory, cognitive, and affective aspects. Despite numerous previous fMRI studies, however, it remains open which spatial distribution of activity is sufficient to encode whether a stimulus is perceived as ... <a href="#" class="abstract_link" onclick="showHide('C');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+						</div>
+						<div id="C_full" class="abstract_full">
+						Pain is known to comprise sensory, cognitive, and affective aspects. Despite numerous previous fMRI studies, however, it remains open which spatial distribution of activity is sufficient to encode whether a stimulus is perceived as painful or not. In this study, we analysed fMRI data from a perceptual decision-making task in which participants were exposed to near-threshold laser pulses. Using multivariate analyses on different spatial scales, we investigated the predictive capacity of fMRI data for decoding whether a stimulus had been perceived as painful. Our analysis yielded a rank order of brain regions: during pain anticipation, activity in the periaqueductal grey (PAG) and orbitofrontal cortex (OFC) afforded the most accurate trial-by-trial discrimination between painful and non-painful experiences; whereas during the actual stimulation, primary and secondary somatosensory cortex, anterior insula, dorsolateral and ventrolateral prefrontal cortex, and OFC were most discriminative. The most accurate prediction of pain perception from the stimulation period, however, was enabled by the combined activity in pain regions commonly referred to as the ‘pain matrix’. Our results demonstrate that the neural representation of (near-threshold) pain is spatially distributed and can be best described at an intermediate spatial scale. In addition to its utility in establishing structure-function mappings, our approach affords trial-by-trial predictions and thus represents a step towards the goal of establishing an objective neuronal marker of pain perception. <a href="#" class="abstract_link" onclick="showHide('C');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+						</div>
+						</li>
+
+						<li>
+						<a href="publications/Brodersen_2011_PLoS_CB.pdf" target="blank">
+							<img src="img/Brodersen_2011_PLoS_CB.png" class="thumbnail" width="88"/>
+						</a>
+						<div class="title">Generative embedding for model-based classification of fMRI data</div>
+						<u>K.H. Brodersen</u>, T.M. Schofield, A.P. Leff, C.S. Ong, E.I. Lomakina, J.M. Buhmann, K.E. Stephan (2011)<br/>
+						<i>PLoS Computational Biology</i>, 7(6): e1002079<br/>
+						<div class="doi">doi:10.1371/journal.pcbi.1002079</div>
+						<a href="publications/Brodersen_2011_PLoS_CB.pdf" target="blank">PDF</a> &nbsp;
+						<a href="http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1002079" target="blank">Website</a> &nbsp;
+						<a href="http://www.ethlife.ethz.ch/archive_articles/120412_neuromodeling_red/index" target="blank">Press release</a> &nbsp;
+						<a href="https://scholar.google.ch/scholar?oi=bibs&hl=en&cites=15471541316111302181&as_sdt=5" target="blank">Citations</a>
+						<div id="E_short" class="abstract_short">
+						Decoding models, such as those underlying multivariate classification algorithms, have been increasingly used to infer cognitive or clinical brain states from measures of brain activity obtained by functional magnetic resonance imaging (fMRI). The practicality of current classifiers, however, is restricted by ... <a href="#" class="abstract_link" onclick="showHide('E');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+						</div>
+						<div id="E_full" class="abstract_full">
+						Decoding models, such as those underlying multivariate classification algorithms, have been increasingly used to infer cognitive or clinical brain states from measures of brain activity obtained by functional magnetic resonance imaging (fMRI). The practicality of current classifiers, however, is restricted by two major challenges. First, due to the high data dimensionality and low sample size, algorithms struggle to separate informative from uninformative features, resulting in poor generalization performance. Second, popular discriminative methods such as support vector machines (SVMs) rarely afford mechanistic interpretability. In this paper, we address these issues by proposing a novel generative-embedding approach that incorporates neurobiologically interpretable generative models into discriminative classifiers. Our approach extends previous work on trial-by-trial classification for electrophysiological recordings to subject-by-subject classification for fMRI and offers two key advantages over conventional methods: it may provide more accurate predictions by exploiting discriminative information encoded in ‘hidden’ physiological quantities such as synaptic connection strengths; and it affords mechanistic interpretability of clinical classifications. Here, we introduce generative embedding for fMRI using a combination of dynamic causal models (DCMs) and SVMs. We propose a general procedure of DCM-based generative embedding for subject-wise classification, provide a concrete implementation, and suggest good-practice guidelines for unbiased application of generative embedding in the context of fMRI. We illustrate the utility of our approach by a clinical example in which we classify moderately aphasic patients and healthy controls using a DCM of thalamo-temporal regions during speech processing. Generative embedding achieves a near-perfect balanced classification accuracy of 98% and significantly outperforms conventional activation-based and correlation-based methods. This example demonstrates how disease states can be detected with very high accuracy and, at the same time, be interpreted mechanistically in terms of abnormalities in connectivity. We envisage that future applications of generative embedding may provide crucial advances in dissecting spectrum disorders into physiologically more well-defined subgroups. <a href="#" class="abstract_link" onclick="showHide('E');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+						</div>
+						</li>
+
+						<li>
+						<a href="publications/Brodersen_2011_NeuroImage.pdf" target="blank">
+							<img src="img/Brodersen_2011_NeuroImage.png" class="thumbnail" width="88"/>
+						</a>
+						<div class="title">Model-based feature construction for multivariate decoding</div>
+						<u>K.H. Brodersen</u>, F. Haiss, C.S. Ong, F. Jung, M. Tittgemeyer, J.M. Buhmann, B. Weber, K.E. Stephan (2011)<br/>
+						<i>NeuroImage</i>, 56, 601-615
+						<div class="doi">doi:10.1016/j.neuroimage.2010.04.036</div>
+						<a href="publications/Brodersen_2011_NeuroImage.pdf" target="blank">PDF</a> &nbsp;
+						<a href="http://dx.doi.org/10.1016/j.neuroimage.2010.04.036" target="blank">Website</a> &nbsp;
+						<a href="downloads.html#mbfc">Data</a>
+						<div id="F_short" class="abstract_short">
+						Decoding models, such as those underlying multivariate classification algorithms, have been increasingly used to infer cognitive or clinical brain states from measures of brain activity obtained by functional magnetic resonance imaging (fMRI). The practicality of current classifiers, however, is restricted by ... <a href="#" class="abstract_link" onclick="showHide('F');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+						</div>
+						<div id="F_full" class="abstract_full">
+				Conventional decoding methods in neuroscience aim to predict discrete brain states from multivariate correlates of neural activity. This approach faces two important challenges. First, a small number of examples are typically represented by a much larger number of features, making it hard to select the few informative features that allow for accurate predictions. Second, accuracy estimates and information maps often remain descriptive and can be hard to interpret. In this paper, we propose a model-based decoding approach that addresses both challenges from a new angle. Our method involves (i) inverting a dynamic causal model of neurophysiological data in a trial-by-trial fashion; (ii) training and testing a discriminative classifier on a strongly reduced feature space derived from trial-wise estimates of the model parameters; and (iii) reconstructing the separating hyperplane. Since the approach is model-based, it provides a principled dimensionality reduction of the feature space; in addition, if the model is neurobiologically plausible, decoding results may offer a mechanistically meaningful interpretation. The proposed method can be used in conjunction with a variety of modelling approaches and brain data, and supports decoding of either trial or subject labels. Moreover, it can supplement evidence-based approaches for model-based decoding and enable structural model selection in cases where Bayesian model selection cannot be applied. Here, we illustrate its application using dynamic causal modelling (DCM) of electrophysiological recordings in rodents. We demonstrate that the approach achieves significant above-chance performance and, at the same time, allows for a neurobiological interpretation of the results.
+				 <a href="#" class="abstract_link" onclick="showHide('F');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+						</div>
+						</li>
+
+						<li>
+						<a href="http://www.jneurosci.org/cgi/content/full/30/48/16324" target="blank">
+							<img src="img/Wiech_2011_JNeur.png" class="thumbnail" width="88"/>
+						</a>
+						<div class="title">Anterior insula integrates information about salience into perceptual<br/>
+						decisions about pain</div>
+						K. Wiech, C.-S. Lin, <u>K.H. Brodersen</u>, U. Bingel, M. Ploner, I. Tracey (2010)<br/>
+						<i>Journal of Neuroscience</i>, 30(48), 16324-16331.
+						<div class="doi">doi:10.1523/jneurosci.2087-10.2010</div>
+						<a href="http://www.jneurosci.org/cgi/content/full/30/48/16324" target="blank">Website</a>
+								<div id="G_short" class="abstract_short">
+								The decision as to whether a sensation is perceived as painful does not only depend on sensory input but also on the significance of the stimulus. Here, we show that the degree to which an impending stimulus is interpreted ... <a href="#" class="abstract_link" onclick="showHide('G');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</div>
+								<div id="G_full" class="abstract_full">
+									The decision as to whether a sensation is perceived as painful does not only depend on sensory input but also on the significance of the stimulus. Here, we show that the degree to which an impending stimulus is interpreted as threatening biases perceptual decisions about pain and that this bias toward pain manifests before stimulus encounter. Using functional magnetic resonance imaging we investigated the neural mechanisms underlying the influence of an experimental manipulation of threat on the perception of laser stimuli as painful. In a near-threshold pain detection paradigm, physically identical stimuli were applied under the participants' assumption that the stimulation is entirely safe (low threat) or potentially harmful (high threat). As hypothesized, significantly more stimuli were rated as painful in the high threat condition. This context-dependent classification of a stimulus as painful was predicted by the prestimulus signal level in the anterior insula, suggesting that this structure integrates information about the significance of a stimulus into the decision about pain. The anticipation of pain increased the prestimulus functional connectivity between the anterior insula and the midcingulate cortex (MCC), a region that was significantly more active during stimulation the more a participant was biased to rate the stimulation as painful under high threat. These findings provide evidence that the anterior insula and MCC as a “salience network” integrate information about the significance of an impending stimulation into perceptual decision-making in the context of pain. <a href="#" class="abstract_link" onclick="showHide('G');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+								</div>
+						</li>
+
+								<li>
+								<a href="https://www.thieme-connect.de/ejournals/sampleIssue/10.1055/s-00000032" target="blank">
+									<img src="img/Stephan_2009_KlinNeur.png" class="thumbnail" width="88"/>
+								</a>
+								<div class="title">Functional and effective connectivity</div>
+								K.E. Stephan, L. Kasper, <u>K.H. Brodersen</u>, C. Mathys (2009)<br/>
+								<i>Klinische Neurophysiologie</i>, 40, 222-232
+								<div class="doi">doi: 10.1055/S-0029-1243196</div>
+								<a href="https://www.thieme-connect.de/ejournals/sampleIssue/10.1055/s-00000032" target="blank">Website</a>
+								<div id="J_short" class="abstract_short">
+						Neurophysiological and imaging procedures to measure brain activity, such as fMRI or EEG, are employed in neuroscience to investigate processes of functional specialisation and functional integration in the human brain ... <a href="#" class="abstract_link" onclick="showHide('J');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+										</div>
+										<div id="J_full" class="abstract_full">
+						Neurophysiological and imaging procedures to measure brain activity, such as fMRI or EEG, are employed in neuroscience to investigate processes of functional specialisation and functional integration in the human brain. Functional integration can be described in two distinct ways: functional connectivity and effective connectivity. Whereas functional connectivity merely describes the statistical dependence between two time series, the concept of effective connectivity requires a mechanistic model of the causative effects upon which the data to be observed are based. This article summarises the conceptual and methodological principles of modern techniques for the analysis of functional and effective connectivity on the basis of fMRI and electrophysiological data. Particular emphasis is placed on dynamic causal modelling (DCM), a new procedure for the analysis of nonlinear neuronal systems. This method has a highly promising potential for clinical applications, e.g., for decoding pathological mechanisms in brain diseases and for the establishment of neurologically valid diagnostic classifications. <a href="#" class="abstract_link" onclick="showHide('J');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+										</div>
+								</li>
+
+								<li>
+								<a href="publications/Brodersen_2009_The_New_Collection.pdf" target="blank">
+									<img src="img/Brodersen_2009_The_New_Collection.png" class="thumbnail" width="88"/>
+								</a>
+								<div class="title">Decoding mental activity from neuroimaging data &mdash; the science behind mind-reading</div>
+								<u>K.H. Brodersen</u> (2009)<br/>
+								<i>The New Collection</i>, Oxford, 4, 50-61
+								<div class="doi">ISSN: 1757-2541</div>
+								<a href="publications/Brodersen_2009_The_New_Collection.pdf" target="blank">PDF</a> &nbsp; <a href="downloads.html#simple_classifier">Code</a>
+								<div id="K_short" class="abstract_short">
+								At the interface of neuroscience and computer science, a new method of analysis has evolved. The idea of reading out mental activity from neuronal measurements has led to increasingly impressive feats of mind-reading ... <a href="#" class="abstract_link" onclick="showHide('K');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</div>
+								<div id="K_full" class="abstract_full">
+						        At the interface of neuroscience and computer science, a new method of analysis has evolved. The idea of reading out mental activity from neuronal measurements has led to increasingly impressive feats of mind-reading. What sounds like science fiction is well-positioned to become a major tool in future brain research. <a href="#" class="abstract_link" onclick="showHide('K');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+								</div>
+								</li>
+
+								<li>
+								<a href="publications/Brodersen_2008_NeuralNetworks.pdf" target="blank">
+									<img src="img/Brodersen_2008_NeuralNetworks.png" class="thumbnail" width="88"/>
+								</a>
+								<div class="title">Integrated Bayesian models of learning and decision making <br/> for saccadic eye movements</div>
+						        <u>K.H. Brodersen</u>, W.D. Penny, L.M. Harrison, J. Daunizeau, C. Ruff, E. Duzel, K.J. Friston, K.E. Stephan (2008)<br/>
+						        <i>Neural Networks</i>, 21(9), 1247-1260
+						        <div class="doi">doi:10.1016/j.neunet.2008.08.007</div>
+								<a href="publications/Brodersen_2008_NeuralNetworks.pdf" target="blank">PDF</a> &nbsp; <a href="http://dx.doi.org/10.1016/j.neunet.2008.08.007" target="blank">Website</a>
+								<div id="L_short" class="abstract_short">
+									The neurophysiology of eye movements has been studied extensively, and several computational models have been proposed for decision-making processes that underlie the generation of eye movements towards a visual stimulus in ... <a href="#" class="abstract_link" onclick="showHide('L');return false;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</div>
+								<div id="L_full" class="abstract_full">
+									The neurophysiology of eye movements has been studied extensively, and several computational models have been proposed for decision-making processes that underlie the generation of eye movements towards a visual stimulus in a situation of uncertainty. One class of models, known as linear rise-to-threshold models, provides an economical, yet broadly applicable, explanation for the observed variability in the latency between the onset of a peripheral visual target and the saccade towards it. So far, however, these models do not account for the dynamics of learning across a sequence of stimuli, and they do not apply to situations in which subjects are exposed to events with conditional probabilities. In this methodological paper, we extend the class of linear rise-to-threshold models to address these limitations. Specifically, we reformulate previous models in terms of a generative, hierarchical model, by combining two separate sub-models that account for the interplay between learning of target locations across trials and the decision-making process within trials. We derive a maximum-likelihood scheme for parameter estimation as well as model comparison on the basis of log likelihood ratios. The utility of the integrated model is demonstrated by applying it to empirical saccade data acquired from three healthy subjects. Model comparison is used (i) to show that eye movements do not only reflect marginal but also conditional probabilities of target locations, and (ii) to reveal subject-specific learning profiles over trials. These individual learning profiles are sufficiently distinct that test samples can be successfully mapped onto the correct subject by a na&#239;ve Bayes classifier.	Altogether, our approach extends the class of linear rise-to-threshold models of saccadic decision making, overcomes some of their previous limitations, and enables statistical inference both about learning of target locations across trials and the decision-making process within trials. <a href="#" class="abstract_link" onclick="showHide('L');return false;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+								</div>
+								</li>
+				</ol>
+				
+				<!-- ============================================================================= -->
+				<br/><br/>
+				<h3>Conference and symposium presentations</h3>
+				<ol start="26"> <!-- KEEP UPDATING -->
+
+					<li>
+					<div class="title">What did we accomplish? Inferring causal impact by counterfactual forecasting</div>
+					<u>K.H. Brodersen</u>, F. Gallusser, J. Koehler, N. Remy, S. Scott (2014)<br/>
+					<i>JSM</i> 2014, Boston, MA, USA.<br/>
+					</li>
+
+					<li>
+					<div class="title">Working memory dependent prefrontal-parietal connectivity and model-based diagnostic classification in schizophrenia</div>
+					L. Deserno, <u>K.H. Brodersen</u>, Z. Lin, W.D. Penny, A. Heinz, K.E. Stephan, F. Schlagenhauf (2013)<br/>
+					<i>EPA</i> 2013, Nice, France.<br/>
+					</li>
+
+					<li>
+					<div class="title">Model-based clustering using generative embedding</div>
+					<u>K.H. Brodersen</u>, Z. Lin, A. Gupta, W.D. Penny, A.P. Leff, M.H. Chehreghani, A.G. Busetto, J.M. Buhmann, K.E. Stephan (2012)<br/>
+					Oral presentation at <i>Human Brain Mapping</i> 2012, Beijing, China.<br/>
+					Awarded with a Trainee Abstract Award.<br/>
+					<a href="publications/Brodersen_2012a_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Variational Bayesian mixed-effects inference for classification studies</div>
+					<u>K.H. Brodersen</u>, J. Daunizeau, C. Mathys, J.R. Chumbley, J.M. Buhmann, K.E. Stephan (2012)<br/>
+					Presented at <i>Human Brain Mapping</i> 2012, Beijing, China.<br/>
+					Awarded with a Trainee Abstract Award.<br/>
+					<a href="publications/Brodersen_2012b_HBM.pdf" target="blank">PDF</a> &nbsp; <a href="http://mloss.org/software/view/407/" target="blank">Software</a>
+					</li>
+
+					<li>
+					<div class="title">Inference on computational models using Bayesian global optimization</div>
+					E.I. Lomakina, C. Mathys, <u>K.H. Brodersen</u>, A. Vezhnevets, K.E. Stephan, J.M. Buhmann (2012)<br/>
+					Presented at <i>Human Brain Mapping</i> 2012, Beijing, China.<br/>
+					<a href="publications/Lomakina_2012_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Generic and task-specific effects of uncertainty and prediction errors <br/>in associative learning</div>
+					S. Iglesias, C. Mathys, <u>K.H. Brodersen</u>, L. Kasper, M. Piccirelli, K.E. Stephan (2012)<br/>
+					Presented at <i>Human Brain Mapping</i> 2012, Beijing, China.<br/>
+					</li>
+
+					<li>
+					<div class="title">Clustering biological systems using generative embedding</div>
+					<u>K.H. Brodersen</u>, A. Gupta, Z. Lin, E.I. Lomakina, J.M. Buhmann, K.E. Stephan (2011)<br/>
+					Presented at <i>SystemsX.ch</i> 2011, Basel.<br/>
+					Awarded with a Best Posters recognition.<br/>
+					<a href="publications/Brodersen_2011_SystemsX.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Towards a mechanistic understanding of pathophysiological brain activity</div>
+					<u>K.H. Brodersen</u>, T.M. Schofield, A.P. Leff, C.S. Ong, E.I. Lomakina, J.M. Buhmann, K.E. Stephan (2011)<br/>
+					Presented at <i>ZIHP Symposium</i> 2011, Zurich.<br/>
+					<a href="publications/Brodersen_2011_ZIHP.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Bayesian hierarchical models for multivariate analyses in fMRI</div>
+					E.I. Lomakina, <u>K.H. Brodersen</u>, C. Mathys, K.E. Stephan (2011)<br/>
+					Presented at <i>ZNZ Symposium</i> 2011, Zurich.<br/>
+					</li>
+
+					<li>
+					<div class="title">Generative embedding for model-based classification of fMRI data</div>
+					<u>K.H. Brodersen</u>, T.M. Schofield, A.P. Leff, C.S. Ong, E.I. Lomakina, J.M. Buhmann, K.E. Stephan (2011)<br/>
+					Oral presentation at <i>Human Brain Mapping</i> 2011, Quebec City, Canada.<br/>
+					Awarded with a Trainee Abstract Award.<br/>
+					<a href="publications/Brodersen_2011e_HBM.pdf" target="blank">PDF</a> &nbsp;
+					<a href="http://www.ethlife.ethz.ch/archive_articles/120412_neuromodeling_red/index" target="blank">Press release</a>
+					</li>
+
+					<li>
+					<div class="title">Mixed-effects inference on classification performance in group studies</div>
+					<u>K.H. Brodersen</u>, J.R. Chumbley, C. Mathys, J. Daunizeau, J.M. Buhmann, K.E. Stephan (2011)<br/>
+					Interactive session at <i>Human Brain Mapping</i> 2011, Quebec City, Canada.<br/>
+					Awarded with a Trainee Abstract Award.<br/>
+					<a href="publications/Brodersen_2011d_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Predicting graduate-level performance from undergraduate achievements</div>
+					J. Zimmermann, <u>K.H. Brodersen</u>, J.-P. Pellet, E. August, J.M. Buhmann (2011)<br/>
+					Accepted for <i>Educational Data Mining</i> 2011, Eindhoven, Netherlands.<br/>
+					<a href="publications/Zimmermann_2011_EDM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Gaussian processes for whole-brain feature selection and classification in fMRI</div>
+					E.I. Lomakina, <u>K.H. Brodersen</u>, T.E.J. Behrens, K.E. Stephan, J.M. Buhmann (2011)<br/>
+					Interactive session at <i>Human Brain Mapping</i> 2011, Quebec City, Canada.<br/>
+					Awarded with a Trainee Abstract Award.<br/>
+					<a href="publications/Lomakina_2011_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Multivariate decoding of perceptual decisions about pain</div>
+					<u>K.H. Brodersen</u>, C.-S. Lin, E.I. Lomakina, K.E. Stephan, K. Wiech, I. Tracey (2011)<br/>
+					Interactive session at <i>Human Brain Mapping</i> 2011, Quebec City, Canada.<br/>
+					Awarded with a Trainee Abstract Award.<br/>
+					<a href="publications/Brodersen_2011c_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Inferring the individual nature of Bayesian learning <br/> under multiple forms of uncertainty</div>
+					C. Mathys, J. Daunizeau, <u>K.H. Brodersen</u>, S. Iglesias, K.J. Friston, K.E. Stephan (2011)<br/>
+					Interactive session at <i>Human Brain Mapping</i> 2011, Quebec City, Canada.<br/>
+					Awarded with a Trainee Abstract Award.<br/>
+					<a href="publications/Mathys_2011_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Orbitofrontal cortex distributes reinforcement to the decision that caused it</div>
+					<u>K.H. Brodersen</u>, L.T. Hunt, E.I. Lomakina, M.F.S. Rushworth, T.E.J. Behrens (2011)<br/>
+					Oral presentation at <i>Human Brain Mapping</i> 2011, Quebec City, Canada.<br/>
+					Awarded with a Trainee Abstract Award.<br/>
+					<a href="publications/Brodersen_2011b_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">The amygdala becomes reward-sensitive when an outcome cannot be <br/> assigned to the correct decision</div>
+					<u>K.H. Brodersen</u>, L.T. Hunt, E.I. Lomakina, M.F.S. Rushworth, T.E.J. Behrens (2011)<br/>
+					Oral presentation at <i>Human Brain Mapping</i> 2011, Quebec City, Canada.<br/>
+					Awarded with a Trainee Abstract Award.<br/>
+					<a href="publications/Brodersen_2011a_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Computational mechanisms of stimulus-stimulus and stimulus-reward <br/>associative learning</div>
+					S. Iglesias, C. Mathys, <u>K.H. Brodersen</u>, K.E. Stephan (2011)<br/>
+					Presented at <i>Human Brain Mapping</i> 2011, Quebec City, Canada.<br/>
+					<a href="publications/Iglesias_2011_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Model-based inference on subject-specific mechanisms of (mal)adaptive learning <br/> and decision making</div>
+					S. Iglesias, <u>K.H. Brodersen</u>, L. Kasper, C. Mathys, M. Piccirelli, K.E. Stephan (2010)<br/>
+					Presented at <i>ZNZ Symposium</i> 2010, Zurich, Switzerland.<br/>
+					<a href="publications/Iglesias_2010_ZNZ.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Model-based multivariate decoding and model selection</div>
+					<u>K.H. Brodersen</u>, F. Haiss, C.S. Ong, F. Jung, P. Allen, M. Tittgemeyer, J.M. Buhmann, P. McGuire, B. Weber, K.E. Stephan (2010)<br/>
+					Presented at <i>Human Brain Mapping</i>, Barcelona, Spain.<br/>
+					Awarded with a Trainee Abstract Award.<br/>
+					<a href="publications/Brodersen_2010b_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Threat-dependent modulation of anterior insula connectivity predicts pain</div>
+					<u>K.H. Brodersen</u>, K. Wiech, C.-S. Lin, I. Tracey (2010)<br/>
+					Oral presentation at <i>Human Brain Mapping</i>, Barcelona, Spain.<br/>
+					<a href="publications/Brodersen_2010a_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Exploring multivariate patterns of neural activity underlying <br/> spatial perception and memory in the hippocampus</div>
+					S.R. Rudebeck, <u>K.H. Brodersen</u>, C.H. Lee (2010)<br/>
+					Presented at <i>SfN</i> 2010, San Diego, California.<br/>
+					<a href="publications/Rudebeck_2010_SfN.pdf" target="blank">PDF</a>
+					</li>
+
+					<li>
+					<div class="title">Functional connectivity of anterior insula predicts threat-related modulation of pain</div>
+					K. Wiech, C.-S. Lin, <u>K.H. Brodersen</u>, I. Tracey (2010)<br/>
+					Presented at <i>IASP</i>, Montreal, Canada.
+					</li>
+
+					<li>
+					<div class="title">Decoding the neural signature of pain</div>
+					K. Wiech, C.-S. Lin, <u>K.H. Brodersen</u>, M. Ploner, U. Bingel, I. Tracey (2009)<br/>
+					Oral presentation at the 6th Congress of the European Federation of IASP Chapters (EFIC), Lisbon.<br/>
+					</li>
+
+					<li>
+					<div class="title">Decoding choice from prefrontal cortex during reinforcement learning</div>
+					<u>K.H. Brodersen</u>, L.T. Hunt, M.E. Walton, M.F.S. Rushworth, T.E.J. Behrens (2009)<br/>
+					Presented at <i>Human Brain Mapping</i>, San Francisco, California.<br/>
+					<a href="publications/Brodersen_2009_HBM.pdf" target="blank">PDF</a>
+					</li>
+
+					</ol>
+
+          </ol>
+	
+  	    </div><!-- /.col -->
+
+  	    <div class="col-md-12">
+          <div class="horline"></div>
+        </div>
+
+	  </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
