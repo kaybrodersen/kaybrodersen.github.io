@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16486034-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-16486034-1');
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,25 +35,13 @@
   </head>
 
   <body>
-	<!-- Google Analytics -->
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-16486034-1']);
-	  _gaq.push(['_trackPageview']);
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
-
 	<!-- Main container -->
     <div class="container">
 
       <!-- Header -->
   	  <div id="header">
 		<h1>Kay H. Brodersen</h1>
-		<p>Google, Inc.</p>
+		<!-- <p>Google</p> -->
 	  </div>
 
       <!-- Navigation bar -->
@@ -78,10 +75,11 @@
       <div class="row" id="home">
 	  
   	    <div class="col-md-12">
-	      <h3>Bayesian statistics, causal inference, and the web</h3>
-		<p>I'm a data scientist at Google, where I work on time-series analysis of web traffic, anomaly detection, causal inference in large-scale experiments, and auction theory. Before joining Google, I was a postdoctoral researcher at the Department of Information Technology and Electrical Engineering at ETH Zurich working on Bayesian inference in high-dimensional time-series data.</p>
-		<p>Statistical data analysis has seen a huge amount of progress in recent years. For example, there have been key advances in approximate inference and increasingly powerful tools for running massively parallelized analyses. Some ideas, for instance variational Bayesian techniques (<a href="file:///Users/kbroders/Documents/Website/2015%20version/talks/Brodersen_2013_03_22.pdf" target="blank">slides</a>), have been popularized by computationally intensive disciplines such as computational neuroscience. The same concepts are really powerful to solve hard problems on web traffic and search ads data. An open-source example is <a class="muted" href="https://google.github.io/CausalImpact/" target="_blank">CausalImpact</a>, a new implementation of an analysis approach to causal inference in time-series data (<a href="https://www.youtube.com/watch?v=GTgZfCltMm8&list=PL6O3g23-p8Tr5eqnIIPdBD_8eE5JBDBik&index=10" target="blank">video</a>).</p>
+	      <h3>Data science, causal inference, and the web</h3>
 
+<p>I'm a data scientist at Google, where I work on large-scale experiments, causal inference, and anomaly detection. An example of a project which I open-sourced is <a href="https://google.github.io/CausalImpact/" target="blank">CausalImpact</a>, a library for causal inference in time-series data (<a href="https://www.youtube.com/watch?v=GTgZfCltMm8&list=PL6O3g23-p8Tr5eqnIIPdBD_8eE5JBDBik&index=10" target="blank">video</a>). Before joining Google, I was a postdoc at ETH Zurich, Switzerland, where I worked on <a href="file:///Users/kbroders/Documents/Website/2015%20version/talks/Brodersen_2013_03_22.pdf" target="blank">variational Bayes</a> and high-dimensional time series (<a href="publications/Brodersen_2012_PhD.pdf" target="blank">thesis</a>).</p>
+
+<p>Statistical data analysis is an exciting field to be in — there's been such incredible progress in methods and tools over the last few years. For example, approximate inference methods, parallelization, the rise of platforms like <a href="https://colab.research.google.com/" target="blank">Colab</a>, or the increasingly rich <a href="https://www.tensorflow.org/" target="blank">TensorFlow</a> stack are all changing the face of analysis work at lightning speed. See <a href="https://careers.google.com/jobs#!t=jo&jid=/google/quantitative-analyst-ads-quality-google-building-110-brandschenkestrasse-3404220752&">https://careers.google.com/</a> for our current open positions.</p>
           <div class="horline" style="margin-top:40px; margin-bottom:25px;"></div>
 
 		  <h3>Recent publications</h3>
